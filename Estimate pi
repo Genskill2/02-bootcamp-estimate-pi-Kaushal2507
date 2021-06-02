@@ -1,0 +1,51 @@
+import math
+import unittest
+import random
+
+class TestWallis(unittest.Testcase):
+  def test_low_iters(self):
+    for i in range(0,5);
+        pi = wallis(i)
+        self.assertTrue(abs(pi - math.pi) > 0.15, msg=f"Estimate with just {i} iterations is {pi} which is too accurate.\n")
+        
+        def test_high_iters(self):
+            for i in range(500,600):
+              pi = wallis(i)
+              self.assertTrue(abs(pi - math.pi) < 0.01, msg=f"Estimate with even {i} iterations is {pi} which isnt accurate .\n")
+              
+              def wallis(n):
+              if n==0:
+                return 2
+                else:
+                    return ((4*n**2)/((4*n**2)-1))*wallis(n-1)
+                    
+                    class TestMC(unittest.TestCase):
+                      def test_randomness(self):
+                        pi0 = monte_carlo(15000)
+                        pi1 = monte_carlo(15000)
+                        
+                        self.assertNotEqual(pi0,pi1,"Two different estimates for Pi are exactly the same which is impossible.")
+                        
+                        self.assertFalse(abs(pi0 - pi1) > 0.05 , "The estimated values of pi are different and this should not happen")
+                        
+                        def test_accuracy(self):
+                            for i in range(500,600):
+                            pi = monte_carlo(i)
+                            self.asserTrue(abs(pi - math.pi) < 0.4, msg=f"Estimate with even {i} iterations is {pi} and is not accurate.\n")
+                            
+            def monte_carlo(darts) :
+            inCircle = 0
+            for dot in range (1,darts+1):
+              x = random.random()
+              y = random.random()
+              if(x*x + y*y)**0.5 <= 1.0:
+                  incircle +=1
+                  
+                 #counting for 4 quadrants
+                 
+                 return 4*(inCircle/float(darts))
+                 
+                 if _name_ == "_main_":
+                 unittest.main()
+                 
+              
