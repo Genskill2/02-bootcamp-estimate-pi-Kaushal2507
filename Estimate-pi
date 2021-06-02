@@ -1,0 +1,27 @@
+import math
+import unittest
+import random
+
+class TestWallis(unittest.Testcase):
+  def test_low_iters(self):
+    for i in range(0,5);
+        pi = wallis(i)
+        self.assertTrue(abs(pi - math.pi) > 0.15, msg=f"Estimate with just {i} iterations is {pi} which is too accurate.\n")
+        
+        def test_high_iters(self):
+            for i in range(500,600):
+              pi = wallis(i)
+              self.assertTrue(abs(pi - math.pi) < 0.01, msg=f"Estimate with even {i} iterations is {pi} which isnt accurate .\n")
+              
+              def wallis(n):
+              if n==0:
+                return 2
+                else:
+                    return ((4*n**2)/((4*n**2)-1))*wallis(n-1)
+                    
+                    class TestMC(unittest.TestCase):
+                      def test_randomness(self):
+                        pi0 = monte_carlo(15000)
+                        pi1 = monte_carlo(15000)
+                        
+                        self.assertNotEqual(pi0,pi1,"Two different estimates for Pi are exactly the same which is impossible.")
